@@ -1,95 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Website Title</title>
-<meta name="description" content="Your meta description goes here.">
-<style>
-/* Styles for the popup */
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    z-index: 9999;
-}
-
-/* Styles for the overlay */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 9998;
-}
-
-/* Style for the button */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Style for the paragraph */
-.paragraph {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <meta name="description" content="Your meta description goes here.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Meta description -->
-<meta name="description" content="Your meta description goes here.">
-
-<!-- Title -->
-<h1>Your Website Title</h1>
-
-<!-- Paragraph text -->
-<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac nisi at ex hendrerit fermentum. Nulla facilisi. Sed ultrices nibh eget aliquet mollis. Integer vitae sapien vehicula, eleifend arcu ut, aliquam nisi. Vestibulum dapibus, mi non consequat convallis, risus risus scelerisque justo, in tempus nisi turpis sit amet est.</p>
-
-<!-- Button to trigger the popup form -->
-<button class="button" onclick="openPopup()">Subscribe Now</button>
-
-<!-- Popup form -->
-<div id="popup" class="popup">
-    <h2>Enter your email</h2>
-    <input type="email" id="email" placeholder="Your email">
-    <button onclick="submitEmail()">Continue</button>
+<div class="container">
+    <header>
+        <h1>Your Website Title</h1>
+    </header>
+    <main>
+        <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac nisi at ex hendrerit fermentum. Nulla facilisi. Sed ultrices nibh eget aliquet mollis. Integer vitae sapien vehicula, eleifend arcu ut, aliquam nisi. Vestibulum dapibus, mi non consequat convallis, risus risus scelerisque justo, in tempus nisi turpis sit amet est.</p>
+        <button id="subscribeBtn">Subscribe Now</button>
+    </main>
 </div>
 
-<!-- Overlay -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Enter your email</h2>
+        <input type="email" id="email" placeholder="Your email">
+        <button onclick="submitEmail()">Continue</button>
+    </div>
+</div>
+
 <div id="overlay" class="overlay"></div>
 
-<script>
-// Function to show the popup form and overlay
-function openPopup() {
-    document.getElementById("popup").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
-}
-
-// Function to submit the email and redirect
-function submitEmail() {
-    var email = document.getElementById("email").value;
-    // Validate email here if needed
-
-    // Redirect to specified link
-    window.location.href = "https://www.example.com/thank-you?email=" + encodeURIComponent(email);
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

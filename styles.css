@@ -80,3 +80,22 @@ button {
     background-color: rgba(0,0,0,0.5);
     z-index: 9998;
 }
+
+/* Styles for the email input box */
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-container input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

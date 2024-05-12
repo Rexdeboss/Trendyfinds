@@ -35,7 +35,7 @@ main {
 
 button {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto 0; /* Added margin-top to create space between button and input */
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -87,7 +87,7 @@ button {
 }
 
 .input-container input[type="email"] {
-    width: 100%;
+    width: calc(100% - 22px); /* Adjusted width to account for padding and border */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

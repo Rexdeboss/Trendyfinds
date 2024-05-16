@@ -21,11 +21,8 @@
 <div id="popup" class="popup">
     <div class="popup-content">
         <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Enter your email</h2>
-        <div class="input-container">
-            <input type="email" id="email" placeholder="Your email">
-        </div>
-        <button onclick="submitEmail()">Continue</button>
+        <h2>Don't forget to follow us on Facebook!</h2>
+        <button onclick="redirectToLink('https://example.com')">OK</button>
     </div>
 </div>
 
@@ -39,6 +36,24 @@
         <li><a href="#">Disclaimer</a></li>
     </ul>
 </footer>
+
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    function redirectToLink(url) {
+        window.location.href = url; // Redirect to the specified URL
+    }
+
+    document.getElementById("subscribeBtn").addEventListener("click", openPopup);
+</script>
 
 </body>
 </html>

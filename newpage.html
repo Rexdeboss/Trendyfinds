@@ -22,7 +22,7 @@
     <div class="popup-content">
         <span class="close" onclick="closePopup()">&times;</span>
         <h2>Don't forget to follow us on Facebook!</h2>
-        <button onclick="redirectToFacebook()">OK</button>
+        <button onclick="redirectToLink('https://example.com')">OK</button>
     </div>
 </div>
 
@@ -48,8 +48,8 @@
         document.getElementById("overlay").style.display = "none";
     }
 
-    function redirectToFacebook() {
-        window.location.href = "https://www.facebook.com/profile.php?id=100006684827470"; // Replace with your Facebook page URL
+    function redirectToLink(url) {
+        window.location.href = url; // Redirect to the specified URL
     }
 
     document.getElementById("subscribeBtn").addEventListener("click", openPopup);

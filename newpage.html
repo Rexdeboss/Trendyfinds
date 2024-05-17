@@ -64,7 +64,7 @@
         const lastVisitTime = localStorage.getItem('lastVisitTime');
         const currentTime = new Date().getTime();
         if (lastVisitTime && (currentTime - parseInt(lastVisitTime)) <= (24 * 60 * 60 * 1000)) {
-            redirectToLink('https://link2.com'); // Redirect to link 2
+            redirectToLink('https://google.com'); // Redirect to link 2
             closePopup();
         } else {
             redirectToLink('https://link1.com'); // Redirect to link 1
